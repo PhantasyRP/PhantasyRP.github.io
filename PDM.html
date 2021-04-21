@@ -1,102 +1,355 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>PhantasyRP</title>
-    <style> a:hover{background-color: green;}</style>
-    <meta http-equiv="X-UA-Compatible"content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-</head>
+<title>PhantasyRP</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.w3-sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+</style>
+<body class="w3-content" style="max-width:2000px">
 
-<body>
-
-    <!-- Navbar (sit on top) -->
-<div class="w3-top">
-    <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-      <a href="#home" class="w3-bar-item w3-button"> Home</a>
-      
-      <!-- Float links to the right. Hide them on small screens -->
-      <div class="w3-right w3-hide-small">
-        <a href="#Pedal" class="w3-bar-item w3-button">Pedal Bikes</a>
-        <a href="#Motorcycles" class="w3-bar-item w3-button">Motorcycles</a>
-        <a href="#Compacts" class="w3-bar-item w3-button">Compacts</a>
-        <a href="#Coupe" class="w3-bar-item w3-button">Coupe</a>
-      </div>
-    </div>
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+    <h3 class="w3-wide"><b>PDM Catalog</b></h3>
   </div>
-<!---<div class="mainpage-BG" >
-      Header to main page
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <img  src="logo.png" class="rounded-circle " alt="Logo" title="Phantasy RolePlay" >                
-            </div>
-            <div class="col-md-4">
-                <br>
-                <h1 id="welcome-tagline" class="Name-blink">PhantasyRP </h1>                                 
-         </p>
-            </div>
-        </div>
-    </div>--->
+  <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+    <a href="#Pedal" class="w3-bar-item w3-button">Pedal Bikes</a>
+    <a href="#Motorcycles" class="w3-bar-item w3-button">Motorcycles</a>
+    <a href="#Compacts" class="w3-bar-item w3-button">Compacts</a>
+    <a href="#Coupe" class="w3-bar-item w3-button">Coupe</a>
+    <a href="#Muscle" class="w3-bar-item w3-button">Muscle</a>
+    <a href="#Off Road" class="w3-bar-item w3-button">Off Road</a>
+    <a href="#Sedan" class="w3-bar-item w3-button">Sedan</a>
+    <a href="#Sports" class="w3-bar-item w3-button">Sports</a>
+    <a href="#Sports Classic" class="w3-bar-item w3-button">Sports Classic</a>
+    <a href="#Super" class="w3-bar-item w3-button">Super</a>
+    <a href="#SUV" class="w3-bar-item w3-button">SUV</a>
+    <a href="#Vans" class="w3-bar-item w3-button">Vans</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+  <div class="w3-bar-item w3-padding-24 w3-wide">PDM Catalog</div>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
 
 
-<span title="Rules">
- <a href="Rules.html" class="text-light bg-dark">Rules</a>
-</span>/
- <span title="Jobs">
- <a href="Jobs.html"class="text-light bg-dark"> Jobs </a>
- </span>/
- <span title="Applications">
- <a href="Applications.html"class="text-light bg-dark"> Applications </a>
- </span>/
- <span title="PDM">
-    <a href="PDM.html"class="text-light bg-dark"> PDM </a>
-    </span>
-</b>
-</div>
-
-<!-- Header -->
-<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <!-- Image header -->
+  <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;">
     <img class="w3-image" src="./Images/Jobs/PDM.png" alt="Architecture" width="1500" height="800">
     <div class="w3-display-middle w3-margin-top w3-center">
       <h1 class="w3-xxlarge w3-text-white"> <span class="w3-hide-small w3-text-light-grey">PDM Catalog</span></h1>
     </div>
   </header>
-  
-  <!-- Page content -->
-  <div class="w3-content w3-padding" style="max-width:1564px">
-  
-    <!-- Project Section -->
-    <!-- Pedal Bikes -->
-    <div class="w3-container w3-padding-32" id="Pedal">
-      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Pedal Bikes</h3>
+
+
+
+<!-- Vehicle grid -->
+
+<!-- Pedal Bikes -->
+<div>
+   <div class="w3-container w3-padding-32" id="Pedal">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Pedal Bikes</h3>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">BMX</div>
+        <img src="./Images/Bikes/BMX.png" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Cruiser</div>
+        <img src="./Images/Bikes/Cruiser.png" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Fixter</div>
+        <img src="./Images/Bikes/Fixter.png" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Scorcher</div>
+        <img src="./Images/Bikes/Scorcher.png" style="width:100%">
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Tri Bike</div>
+        <img src="./Images/Bikes/TriBike.png" style="width:100%">
+      </div>
+    </div>
+  </div>
+  </div>
+<!-- Motorcycles -->
+<div>
+  <div class="w3-container w3-padding-32" id="Motorcycles">
+      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Motorcycles</h3>
+     </div>
+ 
+    <div class="w3-row-padding">
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding">Akuma</div>
+          <img src="./Images/Motorcycles/Akuma.png" style="width:100%">
+        </div>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding">Avarus</div>
+          <img src="./Images/Motorcycles/Avarus.png" style="width:100%">
+        </div>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding">Bagger</div>
+          <img src="./Images/Motorcycles/Bagger.png" style="width:100%">
+        </div>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding">Bati 801</div>
+          <img src="./Images/Motorcycles/Bati 801.png" style="width:100%">
+        </div>
+      </div>
+      </div>
+    <div class="w3-row-padding">
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding">Bati 801 RR</div>
+          <img src="./Images/Motorcycles/Bati 801 RR.png" style="width:100%">
+        </div>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">BF 400</div>
+            <img src="./Images/Motorcycles/BF400.png" style="width:100%">
+          </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">Carbon RS</div>
+            <img src="./Images/Motorcycles/CarbonRS.png" style="width:100%">
+          </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+            <div class="w3-display-container">
+              <div class="w3-display-topleft w3-black w3-padding">Chimera</div>
+              <img src="./Images/Motorcycles/Chimera.png" style="width:100%">
+            </div>
+          </div>
+      </div>
+    <div class="w3-row-padding">
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding">Cliffhanger</div>
+          <img src="./Images/Motorcycles/Cliffhanger.png" style="width:100%">
+        </div>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding">Daemon</div>
+          <img src="./Images/Motorcycles/Daemon.png" style="width:100%">
+        </div>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding">Defiler</div>
+          <img src="./Images/Motorcycles/Defiler.png" style="width:100%">
+        </div>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding">Double T</div>
+          <img src="./Images/Motorcycles/DoubleT.png" style="width:100%">
+        </div>
+      </div>
+      </div>
+    <div class="w3-row-padding">
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding">Enduro</div>
+          <img src="./Images/Motorcycles/Enduro.png" style="width:100%">
+        </div>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">Esskey</div>
+            <img src="./Images/Motorcycles/Esskey.png" style="width:100%">
+          </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-display-container">
+            <div class="w3-display-topleft w3-black w3-padding">Faggio</div>
+            <img src="./Images/Motorcycles/Faggio.png" style="width:100%">
+          </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+            <div class="w3-display-container">
+              <div class="w3-display-topleft w3-black w3-padding">Gargoyle</div>
+              <img src="./Images/Motorcycles/Gargoyle.png" style="width:100%">
+            </div>
+          </div>
+      </div>
+    <div class="w3-row-padding">
+              <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-display-container">
+                  <div class="w3-display-topleft w3-black w3-padding">Hakuchou</div>
+                  <img src="./Images/Motorcycles/Hakuchou.png" style="width:100%">
+                </div>
+              </div>
+              <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-display-container">
+                  <div class="w3-display-topleft w3-black w3-padding">Hakuchou Sport</div>
+                  <img src="./Images/Motorcycles/Hakuchou Sport.png" style="width:100%">
+                </div>
+              </div>
+              <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-display-container">
+                  <div class="w3-display-topleft w3-black w3-padding">Hexer</div>
+                  <img src="./Images/Motorcycles/Hexer.png" style="width:100%">
+                </div>
+              </div>
+              <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-display-container">
+                  <div class="w3-display-topleft w3-black w3-padding">Innovation</div>
+                  <img src="./Images/Motorcycles/Innovation.png" style="width:100%">
+                </div>
+              </div>
+      </div>         
+    <div class="w3-row-padding">
+              <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-display-container">
+                  <div class="w3-display-topleft w3-black w3-padding">Manchez</div>
+                  <img src="./Images/Motorcycles/Manchez.png" style="width:100%">
+                </div>
+              </div>
+              <div class="w3-col l3 m6 w3-margin-bottom">
+                  <div class="w3-display-container">
+                    <div class="w3-display-topleft w3-black w3-padding">Nemesis</div>
+                    <img src="./Images/Motorcycles/Nemesis.png" style="width:100%">
+                  </div>
+                </div>
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                  <div class="w3-display-container">
+                    <div class="w3-display-topleft w3-black w3-padding">Nightblade</div>
+                    <img src="./Images/Motorcycles/Nightblade.png" style="width:100%">
+                  </div>
+                </div>
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <div class="w3-display-container">
+                      <div class="w3-display-topleft w3-black w3-padding">PCJ-600</div>
+                      <img src="./Images/Motorcycles/PCJ600.png" style="width:100%">
+                    </div>
+                  </div>
+      </div>
+    <div class="w3-row-padding">
+              <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-display-container">
+                  <div class="w3-display-topleft w3-black w3-padding">Ruffian</div>
+                  <img src="./Images/Motorcycles/Ruffian.png" style="width:100%">
+                </div>
+              </div>
+              <div class="w3-col l3 m6 w3-margin-bottom">
+                  <div class="w3-display-container">
+                    <div class="w3-display-topleft w3-black w3-padding">Sanchez</div>
+                    <img src="./Images/Motorcycles/Sanchez.png" style="width:100%">
+                  </div>
+                </div>
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                  <div class="w3-display-container">
+                    <div class="w3-display-topleft w3-black w3-padding">Sanctus</div>
+                    <img src="./Images/Motorcycles/Sanctus.png" style="width:100%">
+                  </div>
+                </div>
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <div class="w3-display-container">
+                      <div class="w3-display-topleft w3-black w3-padding">Sovereign</div>
+                      <img src="./Images/Motorcycles/Sovereign.png" style="width:100%">
+                    </div>
+                  </div>
+      </div>
+    <div class="w3-row-padding">
+              <div class="w3-col l3 m6 w3-margin-bottom">
+                <div class="w3-display-container">
+                  <div class="w3-display-topleft w3-black w3-padding">Thrust</div>
+                  <img src="./Images/Motorcycles/Thrust.png" style="width:100%">
+                </div>
+              </div>
+              <div class="w3-col l3 m6 w3-margin-bottom">
+                  <div class="w3-display-container">
+                    <div class="w3-display-topleft w3-black w3-padding">Vader</div>
+                    <img src="./Images/Motorcycles/Vader.png" style="width:100%">
+                  </div>
+                </div>
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                  <div class="w3-display-container">
+                    <div class="w3-display-topleft w3-black w3-padding">Vortex</div>
+                    <img src="./Images/Motorcycles/Vortex.png" style="width:100%">
+                  </div>
+                </div>
+                <div class="w3-col l3 m6 w3-margin-bottom">
+                    <div class="w3-display-container">
+                      <div class="w3-display-topleft w3-black w3-padding">Wolfsbane</div>
+                      <img src="./Images/Motorcycles/Wolfsbane.png" style="width:100%">
+                    </div>
+                  </div>
+      </div>
+  </div>
+<!-- Compacts -->
+<div>
+  <div class="w3-container w3-padding-32" id="Compacts">
+      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Compacts</h3>
     </div>
   
     <div class="w3-row-padding">
       <div class="w3-col l3 m6 w3-margin-bottom">
         <div class="w3-display-container">
-          <div class="w3-display-topleft w3-black w3-padding">BMX</div>
-          <img src="./Images/Bikes/BMX.png" style="width:100%">
+          <div class="w3-display-topleft w3-black w3-padding">Blista</div>
+          <img src="./Images/Compacts/Blista.png" style="width:100%">
         </div>
       </div>
       <div class="w3-col l3 m6 w3-margin-bottom">
         <div class="w3-display-container">
-          <div class="w3-display-topleft w3-black w3-padding">Cruiser</div>
-          <img src="./Images/Bikes/Cruiser.png" style="width:100%">
+          <div class="w3-display-topleft w3-black w3-padding">Brioso</div>
+          <img src="./Images/Compacts/Brioso RA.png" style="width:100%">
         </div>
       </div>
       <div class="w3-col l3 m6 w3-margin-bottom">
         <div class="w3-display-container">
-          <div class="w3-display-topleft w3-black w3-padding">Fixter</div>
-          <img src="./Images/Bikes/Fixter.png" style="width:100%">
+          <div class="w3-display-topleft w3-black w3-padding">Issi</div>
+          <img src="./Images/Compacts/Issi.png" style="width:100%">
         </div>
       </div>
       <div class="w3-col l3 m6 w3-margin-bottom">
         <div class="w3-display-container">
-          <div class="w3-display-topleft w3-black w3-padding">Scorcher</div>
-          <img src="./Images/Bikes/Scorcher.png" style="width:100%">
+          <div class="w3-display-topleft w3-black w3-padding">Panto</div>
+          <img src="./Images/Compacts/Panto.png" style="width:100%">
         </div>
       </div>
     </div>
@@ -104,354 +357,920 @@
     <div class="w3-row-padding">
       <div class="w3-col l3 m6 w3-margin-bottom">
         <div class="w3-display-container">
-          <div class="w3-display-topleft w3-black w3-padding">Tri Bike</div>
-          <img src="./Images/Bikes/TriBike.png" style="width:100%">
+          <div class="w3-display-topleft w3-black w3-padding">Prairie</div>
+          <img src="./Images/Compacts/Prairie.png" style="width:100%">
         </div>
       </div>
     </div>
-  <!-- Motorcycles -->
-    <div class="w3-container w3-padding-32" id="Motorcycles">
-        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Motorcycles</h3>
-      </div>
-    
-      <div class="w3-row-padding">
-        <div class="w3-col l3 m6 w3-margin-bottom">
-          <div class="w3-display-container">
-            <div class="w3-display-topleft w3-black w3-padding">Akuma</div>
-            <img src="./Images/Motorcycles/Akuma.png" style="width:100%">
-          </div>
-        </div>
-        <div class="w3-col l3 m6 w3-margin-bottom">
-          <div class="w3-display-container">
-            <div class="w3-display-topleft w3-black w3-padding">Avarus</div>
-            <img src="./Images/Motorcycles/Avarus.png" style="width:100%">
-          </div>
-        </div>
-        <div class="w3-col l3 m6 w3-margin-bottom">
-          <div class="w3-display-container">
-            <div class="w3-display-topleft w3-black w3-padding">Bagger</div>
-            <img src="./Images/Motorcycles/Bagger.png" style="width:100%">
-          </div>
-        </div>
-        <div class="w3-col l3 m6 w3-margin-bottom">
-          <div class="w3-display-container">
-            <div class="w3-display-topleft w3-black w3-padding">Bati 801</div>
-            <img src="./Images/Motorcycles/Bati 801.png" style="width:100%">
-          </div>
-        </div>
-      </div>
-  
-      <div class="w3-row-padding">
-        <div class="w3-col l3 m6 w3-margin-bottom">
-          <div class="w3-display-container">
-            <div class="w3-display-topleft w3-black w3-padding">Bati 801 RR</div>
-            <img src="./Images/Motorcycles/Bati 801 RR.png" style="width:100%">
-          </div>
-        </div>
-        <div class="w3-col l3 m6 w3-margin-bottom">
-            <div class="w3-display-container">
-              <div class="w3-display-topleft w3-black w3-padding">BF 400</div>
-              <img src="./Images/Motorcycles/BF400.png" style="width:100%">
-            </div>
-          </div>
-          <div class="w3-col l3 m6 w3-margin-bottom">
-            <div class="w3-display-container">
-              <div class="w3-display-topleft w3-black w3-padding">Carbon RS</div>
-              <img src="./Images/Motorcycles/CarbonRS.png" style="width:100%">
-            </div>
-          </div>
-          <div class="w3-col l3 m6 w3-margin-bottom">
-              <div class="w3-display-container">
-                <div class="w3-display-topleft w3-black w3-padding">Chimera</div>
-                <img src="./Images/Motorcycles/Chimera.png" style="width:100%">
-              </div>
-            </div>
-      </div>
-      <div class="w3-row-padding">
-        <div class="w3-col l3 m6 w3-margin-bottom">
-          <div class="w3-display-container">
-            <div class="w3-display-topleft w3-black w3-padding">Cliffhanger</div>
-            <img src="./Images/Motorcycles/Cliffhanger.png" style="width:100%">
-          </div>
-        </div>
-        <div class="w3-col l3 m6 w3-margin-bottom">
-          <div class="w3-display-container">
-            <div class="w3-display-topleft w3-black w3-padding">Daemon</div>
-            <img src="./Images/Motorcycles/Daemon.png" style="width:100%">
-          </div>
-        </div>
-        <div class="w3-col l3 m6 w3-margin-bottom">
-          <div class="w3-display-container">
-            <div class="w3-display-topleft w3-black w3-padding">Defiler</div>
-            <img src="./Images/Motorcycles/Defiler.png" style="width:100%">
-          </div>
-        </div>
-        <div class="w3-col l3 m6 w3-margin-bottom">
-          <div class="w3-display-container">
-            <div class="w3-display-topleft w3-black w3-padding">Double T</div>
-            <img src="./Images/Motorcycles/DoubleT.png" style="width:100%">
-          </div>
-        </div>
-      </div>
-  
-      <div class="w3-row-padding">
-        <div class="w3-col l3 m6 w3-margin-bottom">
-          <div class="w3-display-container">
-            <div class="w3-display-topleft w3-black w3-padding">Enduro</div>
-            <img src="./Images/Motorcycles/Enduro.png" style="width:100%">
-          </div>
-        </div>
-        <div class="w3-col l3 m6 w3-margin-bottom">
-            <div class="w3-display-container">
-              <div class="w3-display-topleft w3-black w3-padding">Esskey</div>
-              <img src="./Images/Motorcycles/Esskey.png" style="width:100%">
-            </div>
-          </div>
-          <div class="w3-col l3 m6 w3-margin-bottom">
-            <div class="w3-display-container">
-              <div class="w3-display-topleft w3-black w3-padding">Faggio</div>
-              <img src="./Images/Motorcycles/Faggio.png" style="width:100%">
-            </div>
-          </div>
-          <div class="w3-col l3 m6 w3-margin-bottom">
-              <div class="w3-display-container">
-                <div class="w3-display-topleft w3-black w3-padding">Gargoyle</div>
-                <img src="./Images/Motorcycles/Gargoyle.png" style="width:100%">
-              </div>
-            </div>
-        </div>
-            <div class="w3-row-padding">
-                <div class="w3-col l3 m6 w3-margin-bottom">
-                  <div class="w3-display-container">
-                    <div class="w3-display-topleft w3-black w3-padding">Hakuchou</div>
-                    <img src="./Images/Motorcycles/Hakuchou.png" style="width:100%">
-                  </div>
-                </div>
-                <div class="w3-col l3 m6 w3-margin-bottom">
-                  <div class="w3-display-container">
-                    <div class="w3-display-topleft w3-black w3-padding">Hakuchou Sport</div>
-                    <img src="./Images/Motorcycles/Hakuchou Sport.png" style="width:100%">
-                  </div>
-                </div>
-                <div class="w3-col l3 m6 w3-margin-bottom">
-                  <div class="w3-display-container">
-                    <div class="w3-display-topleft w3-black w3-padding">Hexer</div>
-                    <img src="./Images/Motorcycles/Hexer.png" style="width:100%">
-                  </div>
-                </div>
-                <div class="w3-col l3 m6 w3-margin-bottom">
-                  <div class="w3-display-container">
-                    <div class="w3-display-topleft w3-black w3-padding">Innovation</div>
-                    <img src="./Images/Motorcycles/Innovation.png" style="width:100%">
-                  </div>
-                </div>
-              </div>
-            
-              <div class="w3-row-padding">
-                <div class="w3-col l3 m6 w3-margin-bottom">
-                  <div class="w3-display-container">
-                    <div class="w3-display-topleft w3-black w3-padding">Manchez</div>
-                    <img src="./Images/Motorcycles/Manchez.png" style="width:100%">
-                  </div>
-                </div>
-                <div class="w3-col l3 m6 w3-margin-bottom">
-                    <div class="w3-display-container">
-                      <div class="w3-display-topleft w3-black w3-padding">Nemesis</div>
-                      <img src="./Images/Motorcycles/Nemesis.png" style="width:100%">
-                    </div>
-                  </div>
-                  <div class="w3-col l3 m6 w3-margin-bottom">
-                    <div class="w3-display-container">
-                      <div class="w3-display-topleft w3-black w3-padding">Nightblade</div>
-                      <img src="./Images/Motorcycles/Nightblade.png" style="width:100%">
-                    </div>
-                  </div>
-                  <div class="w3-col l3 m6 w3-margin-bottom">
-                      <div class="w3-display-container">
-                        <div class="w3-display-topleft w3-black w3-padding">PCJ-600</div>
-                        <img src="./Images/Motorcycles/PCJ600.png" style="width:100%">
-                      </div>
-                    </div>
-              </div>
-              <div class="w3-row-padding">
-                <div class="w3-col l3 m6 w3-margin-bottom">
-                  <div class="w3-display-container">
-                    <div class="w3-display-topleft w3-black w3-padding">Ruffian</div>
-                    <img src="./Images/Motorcycles/Ruffian.png" style="width:100%">
-                  </div>
-                </div>
-                <div class="w3-col l3 m6 w3-margin-bottom">
-                    <div class="w3-display-container">
-                      <div class="w3-display-topleft w3-black w3-padding">Sanchez</div>
-                      <img src="./Images/Motorcycles/Sanchez.png" style="width:100%">
-                    </div>
-                  </div>
-                  <div class="w3-col l3 m6 w3-margin-bottom">
-                    <div class="w3-display-container">
-                      <div class="w3-display-topleft w3-black w3-padding">Sanctus</div>
-                      <img src="./Images/Motorcycles/Sanctus.png" style="width:100%">
-                    </div>
-                  </div>
-                  <div class="w3-col l3 m6 w3-margin-bottom">
-                      <div class="w3-display-container">
-                        <div class="w3-display-topleft w3-black w3-padding">Sovereign</div>
-                        <img src="./Images/Motorcycles/Sovereign.png" style="width:100%">
-                      </div>
-                    </div>
-              </div>
-              <div class="w3-row-padding">
-                <div class="w3-col l3 m6 w3-margin-bottom">
-                  <div class="w3-display-container">
-                    <div class="w3-display-topleft w3-black w3-padding">Thrust</div>
-                    <img src="./Images/Motorcycles/Thrust.png" style="width:100%">
-                  </div>
-                </div>
-                <div class="w3-col l3 m6 w3-margin-bottom">
-                    <div class="w3-display-container">
-                      <div class="w3-display-topleft w3-black w3-padding">Vader</div>
-                      <img src="./Images/Motorcycles/Vader.png" style="width:100%">
-                    </div>
-                  </div>
-                  <div class="w3-col l3 m6 w3-margin-bottom">
-                    <div class="w3-display-container">
-                      <div class="w3-display-topleft w3-black w3-padding">Vortex</div>
-                      <img src="./Images/Motorcycles/Vortex.png" style="width:100%">
-                    </div>
-                  </div>
-                  <div class="w3-col l3 m6 w3-margin-bottom">
-                      <div class="w3-display-container">
-                        <div class="w3-display-topleft w3-black w3-padding">Wolfsbane</div>
-                        <img src="./Images/Motorcycles/Wolfsbane.png" style="width:100%">
-                      </div>
-                    </div>
-              </div>
-
-              <!-- Compacts -->
-    <div class="w3-container w3-padding-32" id="Compacts">
-        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Compacts</h3>
-      </div>
-    
-      <div class="w3-row-padding">
-        <div class="w3-col l3 m6 w3-margin-bottom">
-          <div class="w3-display-container">
-            <div class="w3-display-topleft w3-black w3-padding">Blista</div>
-            <img src="./Images/Compacts/Blista.png" style="width:100%">
-          </div>
-        </div>
-        <div class="w3-col l3 m6 w3-margin-bottom">
-          <div class="w3-display-container">
-            <div class="w3-display-topleft w3-black w3-padding">Brioso</div>
-            <img src="./Images/Compacts/Brioso RA.png" style="width:100%">
-          </div>
-        </div>
-        <div class="w3-col l3 m6 w3-margin-bottom">
-          <div class="w3-display-container">
-            <div class="w3-display-topleft w3-black w3-padding">Issi</div>
-            <img src="./Images/Compacts/Issi.png" style="width:100%">
-          </div>
-        </div>
-        <div class="w3-col l3 m6 w3-margin-bottom">
-          <div class="w3-display-container">
-            <div class="w3-display-topleft w3-black w3-padding">Panto</div>
-            <img src="./Images/Compacts/Panto.png" style="width:100%">
-          </div>
-        </div>
-      </div>
-  
-      <div class="w3-row-padding">
-        <div class="w3-col l3 m6 w3-margin-bottom">
-          <div class="w3-display-container">
-            <div class="w3-display-topleft w3-black w3-padding">Prairie</div>
-            <img src="./Images/Compacts/Prairie.png" style="width:100%">
-          </div>
-        </div>
-      </div>
-
+  </div>
 <!-- Coupe -->
+<div>
 <div class="w3-container w3-padding-32" id="Coupe">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Coupe</h3>
-  </div>
+  <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Coupe</h3>
+</div>
 
+<div class="w3-row-padding">
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding">Cognoscenti Cabrio</div>
+      <img src="./Images/Coupe/Congnoscenti Cabrio.png" style="width:100%">
+    </div>
+  </div>
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding">Exemplar</div>
+      <img src="./Images/Coupe/Exemplar.png" style="width:100%">
+    </div>
+  </div>
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding">F620</div>
+      <img src="./Images/Coupe/F620.png" style="width:100%">
+    </div>
+  </div>
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding">Felon</div>
+      <img src="./Images/Coupe/Felon.png" style="width:100%">
+    </div>
+  </div>
+</div>
+
+<div class="w3-row-padding">
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding">Felon GT</div>
+      <img src="./Images/Coupe/Felon GT.png" style="width:100%">
+    </div>
+  </div>
+  <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Jackal</div>
+        <img src="./Images/Coupe/Jackal.png" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Oracle XS</div>
+        <img src="./Images/Coupe/Oracle XS.png" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Sentinel</div>
+        <img src="./Images/Coupe/Sentinel.png" style="width:100%">
+      </div>
+    </div>
+</div>
+
+<div class="w3-row-padding">
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding">Sentinel XS</div>
+      <img src="./Images/Coupe/Sentinel XS.png" style="width:100%">
+    </div>
+  </div>
+  <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Windsor</div>
+        <img src="./Images/Coupe/Windsor.png" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Windsor Drop</div>
+        <img src="./Images/Coupe/Windsor Drop.png" style="width:100%">
+      </div>
+    </div>
+</div>
+  </div>
+  <!-- Muscle -->
+<div>
+  <div class="w3-container w3-padding-32" id="Muscle">
+   <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Muscle</h3>
+ </div>
+
+ <div class="w3-row-padding">
+   <div class="w3-col l3 m6 w3-margin-bottom">
+     <div class="w3-display-container">
+       <div class="w3-display-topleft w3-black w3-padding">Blade</div>
+       <img src="./Images/Muscle/Blade.png" style="width:100%">
+     </div>
+   </div>
+   <div class="w3-col l3 m6 w3-margin-bottom">
+     <div class="w3-display-container">
+       <div class="w3-display-topleft w3-black w3-padding">Buccaneer</div>
+       <img src="./Images/Muscle/Buccaneer.png" style="width:100%">
+     </div>
+   </div>
+   <div class="w3-col l3 m6 w3-margin-bottom">
+     <div class="w3-display-container">
+       <div class="w3-display-topleft w3-black w3-padding">Buccaneer Custom</div>
+       <img src="./Images/Muscle/Buccaneer Custom.png" style="width:100%">
+     </div>
+   </div>
+   <div class="w3-col l3 m6 w3-margin-bottom">
+     <div class="w3-display-container">
+       <div class="w3-display-topleft w3-black w3-padding">Chino</div>
+       <img src="./Images/Muscle/Chino.png" style="width:100%">
+     </div>
+   </div>
+ </div>
+
+ <div class="w3-row-padding">
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding">Chino Custom</div>
+      <img src="./Images/Muscle/Chino Custom.png" style="width:100%">
+    </div>
+  </div>
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding">Coquette Blackfin</div>
+      <img src="./Images/Muscle/Coquette Blackfin.png" style="width:100%">
+    </div>
+  </div>
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding">Dominator</div>
+      <img src="./Images/Muscle/Dominator.png" style="width:100%">
+    </div>
+  </div>
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding">Dukes</div>
+      <img src="./Images/Muscle/Dukes.png" style="width:100%">
+    </div>
+  </div>
+</div>
+<div class="w3-row-padding">
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding">Faction</div>
+      <img src="./Images/Muscle/Faction.png" style="width:100%">
+    </div>
+  </div>
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding">Faction Rider</div>
+      <img src="./Images/Muscle/Faction Rider.png" style="width:100%">
+    </div>
+  </div>
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding">Faction XL</div>
+      <img src="./Images/Muscle/Faction XL.png" style="width:100%">
+    </div>
+  </div>
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding">Gauntlet</div>
+      <img src="./Images/Muscle/Gauntlet.png" style="width:100%">
+    </div>
+  </div>
+</div>
+<div class="w3-row-padding">
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding">Hustler</div>
+      <img src="./Images/Muscle/Hustler.png" style="width:100%">
+    </div>
+  </div>
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding">Nightshade</div>
+      <img src="./Images/Muscle/Nightshade.png" style="width:100%">
+    </div>
+  </div>
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding">Phoenix</div>
+      <img src="./Images/Muscle/Phoenix.png" style="width:100%">
+    </div>
+  </div>
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding">Picador</div>
+      <img src="./Images/Muscle/Picador.png" style="width:100%">
+    </div>
+  </div>
+</div>
+<div class="w3-row-padding">
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding">Sabre Turbo</div>
+      <img src="./Images/Muscle/Sabre Turbo.png" style="width:100%">
+    </div>
+  </div>
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding">Sabre GT</div>
+      <img src="./Images/Muscle/Sabre GT.png" style="width:100%">
+    </div>
+  </div>
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding">Slamvan</div>
+      <img src="./Images/Muscle/Slamvan.png" style="width:100%">
+    </div>
+  </div>
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding">Vigero</div>
+      <img src="./Images/Muscle/Vigero.png" style="width:100%">
+    </div>
+  </div>
+</div>
+<div class="w3-row-padding">
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding">Vodoo</div>
+      <img src="./Images/Muscle/Vodoo.png" style="width:100%">
+    </div>
+  </div>
+</div>
+
+ </div>
+<!-- Off Road -->
+<div>
+ <div class="w3-container w3-padding-32" id="Off Road">
+     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Off Road</h3>
+    </div>
+
+   <div class="w3-row-padding">
+     <div class="w3-col l3 m6 w3-margin-bottom">
+       <div class="w3-display-container">
+         <div class="w3-display-topleft w3-black w3-padding">BF Injection</div>
+         <img src="./Images/Off Road/BF Injection.png" style="width:100%">
+       </div>
+     </div>
+     <div class="w3-col l3 m6 w3-margin-bottom">
+       <div class="w3-display-container">
+         <div class="w3-display-topleft w3-black w3-padding">Bifta</div>
+         <img src="./Images/Off Road/Bifta.png" style="width:100%">
+       </div>
+     </div>
+     <div class="w3-col l3 m6 w3-margin-bottom">
+       <div class="w3-display-container">
+         <div class="w3-display-topleft w3-black w3-padding">Blazer Sport</div>
+         <img src="./Images/Off Road/Blazer Sport.png" style="width:100%">
+       </div>
+     </div>
+     <div class="w3-col l3 m6 w3-margin-bottom">
+       <div class="w3-display-container">
+         <div class="w3-display-topleft w3-black w3-padding">Brawler</div>
+         <img src="./Images/Off Road/Brawler.png" style="width:100%">
+       </div>
+     </div>
+     </div>
+   <div class="w3-row-padding">
+     <div class="w3-col l3 m6 w3-margin-bottom">
+       <div class="w3-display-container">
+         <div class="w3-display-topleft w3-black w3-padding">Dubsta 6x6</div>
+         <img src="./Images/Off Road/Dubsta 6x6.png" style="width:100%">
+       </div>
+     </div>
+     <div class="w3-col l3 m6 w3-margin-bottom">
+         <div class="w3-display-container">
+           <div class="w3-display-topleft w3-black w3-padding">Dune Buggy</div>
+           <img src="./Images/Off Road/Dune Buggy.png" style="width:100%">
+         </div>
+       </div>
+       <div class="w3-col l3 m6 w3-margin-bottom">
+         <div class="w3-display-container">
+           <div class="w3-display-topleft w3-black w3-padding">Guardian</div>
+           <img src="./Images/Off Road/Guardian.png" style="width:100%">
+         </div>
+       </div>
+       <div class="w3-col l3 m6 w3-margin-bottom">
+           <div class="w3-display-container">
+             <div class="w3-display-topleft w3-black w3-padding">Kamacho</div>
+             <img src="./Images/Off Road/Kamacho.png" style="width:100%">
+           </div>
+         </div>
+     </div>
+   <div class="w3-row-padding">
+     <div class="w3-col l3 m6 w3-margin-bottom">
+       <div class="w3-display-container">
+         <div class="w3-display-topleft w3-black w3-padding">Rebel</div>
+         <img src="./Images/Off Road/Rebel.png" style="width:100%">
+       </div>
+     </div>
+     <div class="w3-col l3 m6 w3-margin-bottom">
+       <div class="w3-display-container">
+         <div class="w3-display-topleft w3-black w3-padding">Trophy Truck</div>
+         <img src="./Images/Off Road/Trophy Truck.png" style="width:100%">
+       </div>
+     </div>
+     </div>
+
+ </div>
+<!-- Sedan -->
+<div>
+ <div class="w3-container w3-padding-32" id="Sedan">
+     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Sedan</h3>
+   </div>
+ 
+   <div class="w3-row-padding">
+     <div class="w3-col l3 m6 w3-margin-bottom">
+       <div class="w3-display-container">
+         <div class="w3-display-topleft w3-black w3-padding">Asea</div>
+         <img src="./Images/Sedan/Asea.png" style="width:100%">
+       </div>
+     </div>
+     <div class="w3-col l3 m6 w3-margin-bottom">
+       <div class="w3-display-container">
+         <div class="w3-display-topleft w3-black w3-padding">Emperor</div>
+         <img src="./Images/Sedan/Emperor.png" style="width:100%">
+       </div>
+     </div>
+     <div class="w3-col l3 m6 w3-margin-bottom">
+       <div class="w3-display-container">
+         <div class="w3-display-topleft w3-black w3-padding">Fugitive</div>
+         <img src="./Images/Sedan/Fugitive.png" style="width:100%">
+       </div>
+     </div>
+     <div class="w3-col l3 m6 w3-margin-bottom">
+       <div class="w3-display-container">
+         <div class="w3-display-topleft w3-black w3-padding">Glendale</div>
+         <img src="./Images/Sedan/Glendale.png" style="width:100%">
+       </div>
+     </div>
+   </div>
+   <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Intruder</div>
+        <img src="./Images/Sedan/Intruder.png" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Premier</div>
+        <img src="./Images/Sedan/Premier.png" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Primo Custom</div>
+        <img src="./Images/Sedan/Primo Custom.png" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Regina</div>
+        <img src="./Images/Sedan/Regina.png" style="width:100%">
+      </div>
+    </div>
+  </div>
   <div class="w3-row-padding">
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Cognoscenti Cabrio</div>
-        <img src="./Images/Coupe/Congnoscenti Cabrio.png" style="width:100%">
+        <div class="w3-display-topleft w3-black w3-padding">Schafter</div>
+        <img src="./Images/Sedan/Schafter.png" style="width:100%">
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Exemplar</div>
-        <img src="./Images/Coupe/Exemplar.png" style="width:100%">
+        <div class="w3-display-topleft w3-black w3-padding">Stretch</div>
+        <img src="./Images/Sedan/Stretch.png" style="width:100%">
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">F620</div>
-        <img src="./Images/Coupe/F620.png" style="width:100%">
+        <div class="w3-display-topleft w3-black w3-padding">Super Diamond</div>
+        <img src="./Images/Sedan/Super Diamond.png" style="width:100%">
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Felon</div>
-        <img src="./Images/Coupe/Felon.png" style="width:100%">
+        <div class="w3-display-topleft w3-black w3-padding">Tailgater</div>
+        <img src="./Images/Sedan/Tailgater.png" style="width:100%">
       </div>
     </div>
   </div>
-
   <div class="w3-row-padding">
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Felon GT</div>
-        <img src="./Images/Coupe/Felon GT.png" style="width:100%">
+        <div class="w3-display-topleft w3-black w3-padding">Warrener</div>
+        <img src="./Images/Sedan/Warrener.png" style="width:100%">
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Washington</div>
+        <img src="./Images/Sedan/Washington.png" style="width:100%">
+      </div>
+    </div>
+
+    </div>
+
+ </div>
+<!-- Sports -->
+<div>
+<div class="w3-container w3-padding-32" id="Sports">
+ <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Sports</h3>
+</div>
+
+  <div class="w3-row-padding">
+ <div class="w3-col l3 m6 w3-margin-bottom">
+   <div class="w3-display-container">
+     <div class="w3-display-topleft w3-black w3-padding">Banshee</div>
+     <img src="./Images/Sports/Banshee.png" style="width:100%">
+   </div>
+ </div>
+ <div class="w3-col l3 m6 w3-margin-bottom">
+   <div class="w3-display-container">
+     <div class="w3-display-topleft w3-black w3-padding">Bestia Gts</div>
+     <img src="./Images/Sports/Bestia Gts.png" style="width:100%">
+   </div>
+ </div>
+ <div class="w3-col l3 m6 w3-margin-bottom">
+   <div class="w3-display-container">
+     <div class="w3-display-topleft w3-black w3-padding">Buffalo</div>
+     <img src="./Images/Sports/Buffalo.png" style="width:100%">
+   </div>
+ </div>
+ <div class="w3-col l3 m6 w3-margin-bottom">
+   <div class="w3-display-container">
+     <div class="w3-display-topleft w3-black w3-padding">Carbonizzare</div>
+     <img src="./Images/Sports/Carbonizzare.png" style="width:100%">
+   </div>
+ </div>
+    </div>
+  <div class="w3-row-padding">
+ <div class="w3-col l3 m6 w3-margin-bottom">
+   <div class="w3-display-container">
+     <div class="w3-display-topleft w3-black w3-padding">Coquette</div>
+     <img src="./Images/Sports/Coquette.png" style="width:100%">
+   </div>
+ </div>
+ <div class="w3-col l3 m6 w3-margin-bottom">
+     <div class="w3-display-container">
+       <div class="w3-display-topleft w3-black w3-padding">Elegy</div>
+       <img src="./Images/Sports/Elegy.png" style="width:100%">
+     </div>
+   </div>
+   <div class="w3-col l3 m6 w3-margin-bottom">
+     <div class="w3-display-container">
+       <div class="w3-display-topleft w3-black w3-padding">Feltzer</div>
+       <img src="./Images/Sports/Feltzer.png" style="width:100%">
+     </div>
+   </div>
+   <div class="w3-col l3 m6 w3-margin-bottom">
+     <div class="w3-display-container">
+       <div class="w3-display-topleft w3-black w3-padding">Furore GT</div>
+       <img src="./Images/Sports/Furore GT.png" style="width:100%">
+     </div>
+   </div>
+    </div>
+  <div class="w3-row-padding">
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding">Fusilade</div>
+      <img src="./Images/Sports/Fusilade.png" style="width:100%">
+    </div>
+  </div>
+  <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Jester</div>
+        <img src="./Images/Sports/Jester.png" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Jester(Race)</div>
+        <img src="./Images/Sports/Jester(Race).png" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Khamelion</div>
+        <img src="./Images/Sports/Khamelion.png" style="width:100%">
+      </div>
+    </div>
+    </div>
+  <div class="w3-row-padding">
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding">Kuruma</div>
+      <img src="./Images/Sports/Kuruma.png" style="width:100%">
+    </div>
+  </div>
+  <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Massacro</div>
+        <img src="./Images/Sports/Massacro.png" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Massacro(Race)</div>
+        <img src="./Images/Sports/Massacro(Race).png" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">9F</div>
+        <img src="./Images/Sports/9F.png" style="width:100%">
+      </div>
+    </div>
+    </div>
+  <div class="w3-row-padding">
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding">9F Cabrio</div>
+      <img src="./Images/Sports/9F-Cabrio.png" style="width:100%">
+    </div>
+  </div>
+  <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Omnis</div>
+        <img src="./Images/Sports/Omnis.png" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Penumbra</div>
+        <img src="./Images/Sports/Penumbra.png" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Schafter V12</div>
+        <img src="./Images/Sports/Schafter V12.png" style="width:100%">
+      </div>
+    </div>
+    </div>
+  <div class="w3-row-padding">
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-display-container">
+      <div class="w3-display-topleft w3-black w3-padding">Sultan</div>
+      <img src="./Images/Sports/Sultan.png" style="width:100%">
+    </div>
+  </div>
+  <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Surano</div>
+        <img src="./Images/Sports/Surano.png" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Verlierer</div>
+        <img src="./Images/Sports/Verlierer.png" style="width:100%">
+      </div>
+    </div>
+    </div>
+
+ </div>
+  <!-- Sports Classic -->
+  <div>
+    <div class="w3-container w3-padding-32" id="Sports Classic">
+     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Sports Classic</h3>
+   </div>
+  
+   <div class="w3-row-padding">
+     <div class="w3-col l3 m6 w3-margin-bottom">
+       <div class="w3-display-container">
+         <div class="w3-display-topleft w3-black w3-padding">Btype</div>
+         <img src="./Images/Sports Classic/Btype.png" style="width:100%">
+       </div>
+     </div>
+     <div class="w3-col l3 m6 w3-margin-bottom">
+       <div class="w3-display-container">
+         <div class="w3-display-topleft w3-black w3-padding">Btype Luxe</div>
+         <img src="./Images/Sports Classic/Btype Luxe.png" style="width:100%">
+       </div>
+     </div>
+     <div class="w3-col l3 m6 w3-margin-bottom">
+       <div class="w3-display-container">
+         <div class="w3-display-topleft w3-black w3-padding">Casco</div>
+         <img src="./Images/Sports Classic/Casco.png" style="width:100%">
+       </div>
+     </div>
+     <div class="w3-col l3 m6 w3-margin-bottom">
+       <div class="w3-display-container">
+         <div class="w3-display-topleft w3-black w3-padding">Coquette Classic</div>
+         <img src="./Images/Sports Classic/Coquette Classic.png" style="width:100%">
+       </div>
+     </div>
+   </div>
+   <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Stirling GT</div>
+        <img src="./Images/Sports Classic/Stirling GT.png" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Manana</div>
+        <img src="./Images/Sports Classic/Manana.png" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Monroe</div>
+        <img src="./Images/Sports Classic/Monroe.png" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Pigalle</div>
+        <img src="./Images/Sports Classic/Pigalle.png" style="width:100%">
+      </div>
+    </div>
+  </div>
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Stinger</div>
+        <img src="./Images/Sports Classic/Stinger.png" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Stinger GT</div>
+        <img src="./Images/Sports Classic/Stinger GT.png" style="width:100%">
+      </div>
+    </div>
+
+  </div>
+
+   </div>
+  <!-- Super -->
+  <div>
+   <div class="w3-container w3-padding-32" id="Super">
+       <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Super</h3>
+      </div>
+  
+     <div class="w3-row-padding">
+       <div class="w3-col l3 m6 w3-margin-bottom">
+         <div class="w3-display-container">
+           <div class="w3-display-topleft w3-black w3-padding">Banshee 900R</div>
+           <img src="./Images/Super/Banshee 900R.png" style="width:100%">
+         </div>
+       </div>
+       <div class="w3-col l3 m6 w3-margin-bottom">
+         <div class="w3-display-container">
+           <div class="w3-display-topleft w3-black w3-padding">Bullet</div>
+           <img src="./Images/Super/Bullet.png" style="width:100%">
+         </div>
+       </div>
+       <div class="w3-col l3 m6 w3-margin-bottom">
+         <div class="w3-display-container">
+           <div class="w3-display-topleft w3-black w3-padding">Cheetah</div>
+           <img src="./Images/Super/Cheetah.png" style="width:100%">
+         </div>
+       </div>
+       <div class="w3-col l3 m6 w3-margin-bottom">
+         <div class="w3-display-container">
+           <div class="w3-display-topleft w3-black w3-padding">FMJ</div>
+           <img src="./Images/Super/FMJ.png" style="width:100%">
+         </div>
+       </div>
+       </div>
+     <div class="w3-row-padding">
+       <div class="w3-col l3 m6 w3-margin-bottom">
+         <div class="w3-display-container">
+           <div class="w3-display-topleft w3-black w3-padding">Osiris</div>
+           <img src="./Images/Super/Osiris.png" style="width:100%">
+         </div>
+       </div>
+       <div class="w3-col l3 m6 w3-margin-bottom">
+           <div class="w3-display-container">
+             <div class="w3-display-topleft w3-black w3-padding">Pfister</div>
+             <img src="./Images/Super/Pfister.png" style="width:100%">
+           </div>
+         </div>
+         <div class="w3-col l3 m6 w3-margin-bottom">
+           <div class="w3-display-container">
+             <div class="w3-display-topleft w3-black w3-padding">Reaper</div>
+             <img src="./Images/Super/Reaper.png" style="width:100%">
+           </div>
+         </div>
+         <div class="w3-col l3 m6 w3-margin-bottom">
+             <div class="w3-display-container">
+               <div class="w3-display-topleft w3-black w3-padding">ETR1</div>
+               <img src="./Images/Super/ETR1.png" style="width:100%">
+             </div>
+           </div>
+       </div>
+   </div>
+  <!-- SUV -->
+  <div>
+   <div class="w3-container w3-padding-32" id="SUV">
+       <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">SUV</h3>
+     </div>
+   
+     <div class="w3-row-padding">
+       <div class="w3-col l3 m6 w3-margin-bottom">
+         <div class="w3-display-container">
+           <div class="w3-display-topleft w3-black w3-padding">Baller</div>
+           <img src="./Images/SUV/Baller.png" style="width:100%">
+         </div>
+       </div>
+       <div class="w3-col l3 m6 w3-margin-bottom">
+         <div class="w3-display-container">
+           <div class="w3-display-topleft w3-black w3-padding">Baller Sport</div>
+           <img src="./Images/SUV/Baller Sport.png" style="width:100%">
+         </div>
+       </div>
+       <div class="w3-col l3 m6 w3-margin-bottom">
+         <div class="w3-display-container">
+           <div class="w3-display-topleft w3-black w3-padding">Contender</div>
+           <img src="./Images/SUV/Contender.png" style="width:100%">
+         </div>
+       </div>
+       <div class="w3-col l3 m6 w3-margin-bottom">
+         <div class="w3-display-container">
+           <div class="w3-display-topleft w3-black w3-padding">Dubsta</div>
+           <img src="./Images/SUV/Dubsta.png" style="width:100%">
+         </div>
+       </div>
+     </div>
+     <div class="w3-row-padding">
+      <div class="w3-col l3 m6 w3-margin-bottom">
         <div class="w3-display-container">
-          <div class="w3-display-topleft w3-black w3-padding">Jackal</div>
-          <img src="./Images/Coupe/Jackal.png" style="width:100%">
+          <div class="w3-display-topleft w3-black w3-padding">Dubsta Lux</div>
+          <img src="./Images/SUV/Dubsta Lux.png" style="width:100%">
         </div>
       </div>
       <div class="w3-col l3 m6 w3-margin-bottom">
         <div class="w3-display-container">
-          <div class="w3-display-topleft w3-black w3-padding">Oracle XS</div>
-          <img src="./Images/Coupe/Oracle XS.png" style="width:100%">
+          <div class="w3-display-topleft w3-black w3-padding">Fathom</div>
+          <img src="./Images/SUV/Fathom.png" style="width:100%">
         </div>
       </div>
       <div class="w3-col l3 m6 w3-margin-bottom">
         <div class="w3-display-container">
-          <div class="w3-display-topleft w3-black w3-padding">Sentinel</div>
-          <img src="./Images/Coupe/Sentinel.png" style="width:100%">
+          <div class="w3-display-topleft w3-black w3-padding">Granger</div>
+          <img src="./Images/SUV/Granger.png" style="width:100%">
         </div>
       </div>
-  </div>
-
-  <div class="w3-row-padding">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Sentinel XS</div>
-        <img src="./Images/Coupe/Sentinel XS.png" style="width:100%">
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding">Gresley</div>
+          <img src="./Images/SUV/Gresley.png" style="width:100%">
+        </div>
       </div>
     </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
+    <div class="w3-row-padding">
+      <div class="w3-col l3 m6 w3-margin-bottom">
         <div class="w3-display-container">
-          <div class="w3-display-topleft w3-black w3-padding">Windsor</div>
-          <img src="./Images/Coupe/Windsor.png" style="width:100%">
+          <div class="w3-display-topleft w3-black w3-padding">Huntley S</div>
+          <img src="./Images/SUV/Huntley S.png" style="width:100%">
         </div>
       </div>
       <div class="w3-col l3 m6 w3-margin-bottom">
         <div class="w3-display-container">
-          <div class="w3-display-topleft w3-black w3-padding">Windsor Drop</div>
-          <img src="./Images/Coupe/Windsor Drop.png" style="width:100%">
+          <div class="w3-display-topleft w3-black w3-padding">Landstalker</div>
+          <img src="./Images/SUV/Landstalker.png" style="width:100%">
         </div>
       </div>
-  </div>
-
-
-
-
-
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding">Mesa</div>
+          <img src="./Images/SUV/Mesa.png" style="width:100%">
+        </div>
       </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding">Patriot</div>
+          <img src="./Images/SUV/Patriot.png" style="width:100%">
+        </div>
+      </div>
+    </div>
+    <div class="w3-row-padding">
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding">Radius</div>
+          <img src="./Images/SUV/Radius.png" style="width:100%">
+        </div>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding">Rocoto</div>
+          <img src="./Images/SUV/Rocoto.png" style="width:100%">
+        </div>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding">Seminole</div>
+          <img src="./Images/SUV/Seminole.png" style="width:100%">
+        </div>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding">Seminole S</div>
+          <img src="./Images/SUV/Seminole S.png" style="width:100%">
+        </div>
+      </div>
+    </div>
+
+   </div>
+  <!-- Vans -->
+<div>
+  <div class="w3-container w3-padding-32" id="Vans">
+   <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Vans</h3>
   </div>
+  
+  <div class="w3-row-padding">
+   <div class="w3-col l3 m6 w3-margin-bottom">
+     <div class="w3-display-container">
+       <div class="w3-display-topleft w3-black w3-padding">Bison</div>
+       <img src="./Images/Vans/Bison.png" style="width:100%">
+     </div>
+   </div>
+   <div class="w3-col l3 m6 w3-margin-bottom">
+     <div class="w3-display-container">
+       <div class="w3-display-topleft w3-black w3-padding">Bobcat XL</div>
+       <img src="./Images/Vans/Bobcat XL.png" style="width:100%">
+     </div>
+   </div>
+   <div class="w3-col l3 m6 w3-margin-bottom">
+     <div class="w3-display-container">
+       <div class="w3-display-topleft w3-black w3-padding">Camper</div>
+       <img src="./Images/Vans/Camper.png" style="width:100%">
+     </div>
+   </div>
+   <div class="w3-col l3 m6 w3-margin-bottom">
+     <div class="w3-display-container">
+       <div class="w3-display-topleft w3-black w3-padding">Gang burrito</div>
+       <img src="./Images/Vans/Gang burrito.png" style="width:100%">
+     </div>
+   </div>
+  </div>
+  
+  <div class="w3-row-padding">
+   <div class="w3-col l3 m6 w3-margin-bottom">
+     <div class="w3-display-container">
+       <div class="w3-display-topleft w3-black w3-padding">Journey</div>
+       <img src="./Images/Vans/Journey.png" style="width:100%">
+     </div>
+   </div>
+   <div class="w3-col l3 m6 w3-margin-bottom">
+       <div class="w3-display-container">
+         <div class="w3-display-topleft w3-black w3-padding">Minivan</div>
+         <img src="./Images/Vans/Minivan.png" style="width:100%">
+       </div>
+     </div>
+     <div class="w3-col l3 m6 w3-margin-bottom">
+       <div class="w3-display-container">
+         <div class="w3-display-topleft w3-black w3-padding">Moonbeam</div>
+         <img src="./Images/Vans/Moonbeam.png" style="width:100%">
+       </div>
+     </div>
+     <div class="w3-col l3 m6 w3-margin-bottom">
+       <div class="w3-display-container">
+         <div class="w3-display-topleft w3-black w3-padding">Paradise</div>
+         <img src="./Images/Vans/Paradise.png" style="width:100%">
+       </div>
+     </div>
+  </div>
+  
+  <div class="w3-row-padding">
+   <div class="w3-col l3 m6 w3-margin-bottom">
+     <div class="w3-display-container">
+       <div class="w3-display-topleft w3-black w3-padding">Surfer</div>
+       <img src="./Images/Vans/Surfer.png" style="width:100%">
+     </div>
+   </div>
+
+  </div>
+</div>
+  <!-- End page content -->
+</div>
+
+
+
+<script>
+// Accordion 
+function myAccFunc() {
+  var x = document.getElementById("demoAcc");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// Click on the "Jeans" link on page load to open the accordion for demo purposes
+document.getElementById("myBtn").click();
+
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
 </body>
 </html>
